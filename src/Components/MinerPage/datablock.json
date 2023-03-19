@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "LastName": "benallou",
+    "FirstName": "Adel",
+    "Departement": "informatique",
+    "Degree": "Master 2 en Anglais"
+  },
+  {
+    "id": 2,
+    "LastName": "Haicheur",
+    "FirstName": "Ichrak",
+    "Departement": "Math",
+    "Degree": "Master 2 en Francais"
+  },
+  {
+    "id": 3,
+    "LastName": "Maameri",
+    "FirstName": "Kenza",
+    "Departement": "Architecture",
+    "Degree": "Master 2 en kesh haja"
+  }
+]

@@ -1,0 +1,30 @@
+.position {
+  
+  margin-left: 7rem !important;
+
+  text-indent: 80px;
+  
+  text-align: center;
+  
+  color: #77B5FE !important;;
+  
+}
+
+.position:hover {
+  color: #5859B3 !important;
+}
+
+.navi{
+  font-weight: 800;
+  font-size: 16px;
+  padding : 7px 7px;
+  
+  
+  
+  
+}
+
+.navi1{
+ 
+
+}

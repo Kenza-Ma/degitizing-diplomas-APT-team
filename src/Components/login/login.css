@@ -1,0 +1,23 @@
+.LogIcon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 2rem;
+}
+
+.LogImage {
+  max-width: 700px;
+  max-height: 700px;
+}
+
+.mb23 {
+  background-color: #77b5fe;
+  border: blue;
+}
+
+.login {
+  text-align: left;
+  font-weight: 800;
+  font-size: 1.5em;
+  color: #4946a1;
+  margin-left: 20px;
+}

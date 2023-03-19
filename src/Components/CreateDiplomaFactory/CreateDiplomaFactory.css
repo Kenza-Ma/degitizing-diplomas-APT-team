@@ -1,0 +1,35 @@
+/* Center the content */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Style the h1 */
+  h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .CreateFactoryBold {
+    font-weight: bold;
+    margin-top: 25px;
+  }
+
+  .CreateFactoryButton {
+    margin-top: 15px;
+    float: right;
+  }
+  
+  /* Style the image */
+  img {
+    display: block;
+    margin: auto;
+    width: 70%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 2em;
+    border-radius: 20px;
+  }

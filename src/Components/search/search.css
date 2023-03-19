@@ -1,0 +1,27 @@
+.degree {
+  margin-top: 20px !important;
+  max-height: 500px !important;
+  max-width: 500px !important;
+  align-self: center;
+}
+
+.proof {
+  margin-bottom: 2rem !important;
+  margin-top: 10px !important;
+}
+
+.endis {
+  background-color: #008ded;
+}
+
+.endis1 {
+  background-color: #ffa954;
+  border-color: #ffa954;
+  align-self: center !important;
+}
+
+.okk {
+  width: 500px !important;
+  align-self: center !important;
+  margin: 0 auto !important;
+}

@@ -1,0 +1,10 @@
+.tableposition {
+  display: flex !important;
+  justify-content: center !important;
+  padding: 90px;
+}
+
+.valider {
+  background-color: green !important;
+  border-color: green !important;
+}

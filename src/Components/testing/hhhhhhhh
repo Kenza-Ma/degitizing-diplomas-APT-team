@@ -1,0 +1,91 @@
+// to  create a diploma 
+export const minerload = async () => {
+
+let diplomas=[];
+    // If MetaMask exists
+ if (typeof window.ethereum !== "undefined") {
+    await window.ethereum.enable();
+    const provider = await new ethers.providers.Web3Provider(window.ethereum);
+    const contractASC = await new ethers.Contract(
+      CONTRACT_ADDRESS_ASC,
+      ASCJSON.abi,
+      provider.getSigner()
+    );
+    try {
+    //  let currentaddress=await provider.getSigner().getAddress();
+    //     console.log("contract loaded",currentaddress);
+    //     let name=await contractASC.getName(currentaddress);
+    //     let CONTRACT_ADDRESS_DIP=await contractASC.getAddress(provider.getSigner().getAddress());
+    //     console.log('jjj',CONTRACT_ADDRESS_DIP);
+    //     console.log("dkheeeel iffffffffffffffffff");
+    //     const contract = await new ethers.Contract(
+    //         CONTRACT_ADDRESS_DIP,
+    //         DiplomaJSON.abi,
+    //         provider.getSigner()
+    //       );
+    // //        if(CONTRACT_ADDRESS_DIP!="0x0000000000000000000000000000000000000000")
+    // //    {
+    //       console.log("llll",contract.address);
+    //       let diplomescount= await contract.getdiplomesCount();
+    //       diplomescount=diplomescount.toNumber();
+    //        console.log(diplomescount);
+    //       const diplomas = [];
+    //       for (var i = 0; i <diplomescount; i++) {
+    //           const diploma = await contract.diplomes(i);
+    //           diploma[0] = diploma[0].toNumber();
+    //          diplomas.push(diploma);
+    //          console.log(diplomas[i]);
+    //          }
+            
+
+            // return {currentaddress,name,diplomas};
+            // }
+            // else
+            // { console.log("nooooooooooo");
+             //console.log("contract loaded",currentaddress);
+             //let name2=await contractASC.getName(currentaddress);
+             //console.log("hhhhff",name2.toString());
+               // CONTRACT_ADDRESS_FACT=await contractASC.getAddress(provider.getSigner().getAddress());
+             //console.log('jjj',CONTRACT_ADDRESS_FACT);
+             let CONTRACT_ADDRESS_FACT="0xAA1303D227aF374773B0756b00953f8F53A1cB9b";
+             console.log('jjj',CONTRACT_ADDRESS_FACT);
+             const contract2 = await new ethers.Contract(
+                 CONTRACT_ADDRESS_FACT,
+                 FACTORYJSON.abi,
+                 provider.getSigner()
+               );
+            //diplomas.push(await contract2.diplometovalid(0));
+            let adel=await contract2.diplometovalid(0);
+    adel[0]=adel[0].toNumber();
+    adel[7]=adel[7].toNumber();
+    //  //nombre de personnes qui ont valider ce diplome (initialisé par 0)
+    // adel.nbvalidation=adel.nbvalidation.toNumber();
+    console.log("adellll",adel)
+    diplomas.push(adel);
+    console.log("dipppp",diplomas[0]);
+   
+
+             console.log("hayaaaaaaa");
+        console.log("dipppp",diplomas[0]);
+        let currentaddress="currentaddress"
+        let name="name"
+        return {currentaddress,name,diplomas};
+        //return {currentaddress,name,diplomas};
+            }
+           
+
+
+
+
+
+
+        // const name= await contract.getName(provider.getSigner());
+        // // console.log("name : ",name.toString());
+        // console.log("contract loaded2",currentaddress,name);
+
+        // return {currentaddress,name,diplomas};
+    catch (error) {
+      console.log("Error: ", error);
+    }
+  }
+}
