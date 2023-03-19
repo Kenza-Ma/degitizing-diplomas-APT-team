@@ -4,7 +4,7 @@ import ASCJSON from "../../ABI/contracts/AddressStorageContract.sol/AddressStora
 import FACTORYJSON from "../../ABI/contracts/Factory.sol/Factory.json";
 //import { useState } from "react";
 //const CONTRACT_ADDRESS="0xeB5AAcE630E762a3257a07Ba1697C849714a2FEb";
-const CONTRACT_ADDRESS_ASC="0x47d8C20AC11c1D3747f01FF315177c12d1232E17";
+const CONTRACT_ADDRESS_ASC="0x183b0ce910849f3Ac46491A61972dDB5dF8dB15D";
 export const CreateFactory = async (address_faculty,name) => { 
 // If MetaMask exists
  if (typeof window.ethereum !== "undefined") {

@@ -1,0 +1,86 @@
+.border-md {
+    border-width: 1px;
+  }
+  
+  .navbar2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black!important;
+    z-index: 100;
+  }
+  
+
+  .btn-facebook {
+    background: #405d9d;
+    border: none;
+  }
+  
+  .btn-facebook:hover,
+  .btn-facebook:focus {
+    background: #314879;
+  }
+  
+  .btn-twitter {
+    background: #42aeec;
+    border: none;
+  }
+  
+  .btn-twitter:hover,
+  .btn-twitter:focus {
+    background: #1799e4;
+  }
+  
+  /*
+  *
+  * ==========================================
+  * FOR DEMO PURPOSES
+  * ==========================================
+  *
+  */
+  
+  .form-control:not(select) {
+    padding: 0.5rem 0.5rem;
+  }
+  
+  .form-control::placeholder {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  .form-control:focus {
+    box-shadow: none;
+  }
+
+  .px-4 {
+    padding: 1rem !important;
+  }
+  
+  .input-group-prepend .input-group-text {
+    border-radius: 20px 0 0 20px;
+  }
+  
+  .form-control {
+    border-radius: 0 20px 20px 0;
+  }
+  
+  .createblockimage {
+  
+   width: 700px;
+    transform: scale(1.2); /* increase the size of the image by 50% */
+    
+
+    
+  }
+
+  .createblockbutton 
+  {
+    background-color: #8f6dff;
+    width: 100%;
+    border-color: #8f6dff;
+  }
+  .createblockbutton:hover{
+    background-color: hwb(254 28% 12%)!important;
+    border-color: hwb(254 28% 12%)!important;
+    }

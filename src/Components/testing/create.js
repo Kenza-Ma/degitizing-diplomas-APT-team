@@ -5,7 +5,7 @@ import FACTORYJSON from "../../ABI/contracts/Factory.sol/Factory.json";
 
 //const CONTRACT_ADDRESS_DIP="provide addresss"
 const CONTRACT_ADDRESS="0xDcA167A4Cb0540712C032a094081c2e4bC2447AD"; //Factory
-const CONTRACT_ADDRESS_ASC="0x781CF50D0e73D7135A8974cc84d8527665678469"; //adresse storage contract
+//const CONTRACT_ADDRESS_ASC="0x781CF50D0e73D7135A8974cc84d8527665678469"; //adresse storage contract
 
 
 
@@ -19,7 +19,7 @@ export const create = async (
     date
   ) => {
 
-    const CONTRACT_ADDRESS_ASC="0x47d8C20AC11c1D3747f01FF315177c12d1232E17";
+    const CONTRACT_ADDRESS_ASC="0x183b0ce910849f3Ac46491A61972dDB5dF8dB15D";
     // If MetaMask exists
  if (typeof window.ethereum !== "undefined") {
     await window.ethereum.enable();
@@ -40,15 +40,16 @@ export const create = async (
             provider.getSigner()
           );
         console.log("contract loaded");
-        let diplomescount= await contract.getdiplomesCount();
-        diplomescount=diplomescount.toNumber();
-         console.log(diplomescount);
-        const diplomas = [];
-         for (var i = 0; i <diplomescount; i++) {
-            const diploma = await contract.diplomes(i);
-            diploma[0] = diploma[0].toNumber();
-           diplomas.push(diploma);
-           }
+        // let diplomescount= await contract.getdiplomesCount();
+        // diplomescount=diplomescount.toNumber();
+        //  console.log(diplomescount);
+        // const diplomas = [];
+        //  for (var i = 0; i <diplomescount; i++) {
+        //     const diploma = await contract.diplomes(i);
+          
+        //     diploma[0] = diploma[0].toNumber();
+        //    diplomas.push(diploma);
+        //    }
         
          let newMatricule = await contract.getdiplomeIndex(matricule);
         newMatricule = newMatricule.toNumber();

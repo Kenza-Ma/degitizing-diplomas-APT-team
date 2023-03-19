@@ -2,6 +2,15 @@
   border-width: 1px;
 }
 
+.navbar2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black!important;
+  z-index: 100;
+}
+
 h2 {
   color: black;
   text-align: center;
@@ -55,4 +64,17 @@ body {
 
 .px-4 {
   padding: 1rem !important;
+}
+
+.input-group-prepend .input-group-text {
+  border-radius: 20px 0 0 20px;
+}
+
+.form-control {
+  border-radius: 0 20px 20px 0;
+}
+
+.createblockimage {
+
+  width: 100%;
 }

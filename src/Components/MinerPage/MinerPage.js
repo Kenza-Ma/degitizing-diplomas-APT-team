@@ -6,38 +6,42 @@ import "./MinerPage.css";
 import "antd/dist/antd.css";
 import { textAlign } from "@mui/system";
 import { blue } from "@material-ui/core/colors";
+import {validate} from "./../testing/validate";
 import NavigationConnected from "../Navigation/NavigationConnected";
 
 function MinerPage() {
-  /*const [datafile, setData] = useState({ Data });
+ // const [datafile, setData] = useState({ Data });
 
 
 
-  const modifieddata = datafile.Data.map(({ body, ...item }) => ({
-    ...item,
-    key: item.id,
-  }));
+//   const modifieddata = datafile.Data.map(({ body, ...item }) => ({
+//     ...item,
+//     key: item.id,
+//   }));
 
-  const validate = (value) => {
-    const datasource = [...modifieddata];
-    const filtereddata = datasource.filter((item) => item.id === value.id);
-    console.log(filtereddata);
-  };
-  */
+//   const validate = (value) => {
+//     const datasource = [...modifieddata];
+//     const filtereddata = datasource.filter((item) => item.id === value.id);
+//     console.log(filtereddata);
+//   };
+  
 
   const [refresh, setRefresh] = useState(true);
   const [degrees, setDegrees] = useState();
   const [account, setAccount] = useState();
   const [name, setName] = useState();
   const validation = (value) => {
-    //validate(value);
+
+    validate(value);
   };
 
   useEffect(() => {
     if (!refresh) return;
     setRefresh(false);
     minerload().then((e) => {
+      console.log("hh",e.diplomas);
       setDegrees(e.diplomas);
+      console.log("hh",e.diplomas);
       setAccount(e.currentaddress);
       setName(e.name.toString());
       console.log(e.currentaddress.toString());

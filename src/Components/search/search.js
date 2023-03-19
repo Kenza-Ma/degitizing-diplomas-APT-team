@@ -3,7 +3,7 @@ import { Form, Button, Container, Row, Col, Stack } from "react-bootstrap";
 import "./search.css";
 import ImageDegree from "../../Images/graduation-hat.png";
 import Navigation from "../Navigation/Navigation";
-import { verify } from "../testing/func";
+import { verify } from "../testing/verify";
 
 function Search() {
   const [value, setValue] = useState(0);

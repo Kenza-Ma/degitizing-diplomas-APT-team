@@ -22,7 +22,7 @@ async function main() {
   const factory = await Factory.deploy(addressStorageContract.address, MINISTRY, UNIVERSITY,"USTHB");
   await factory.deployed();
   console.log("factory deployed to:", factory.address);
-  console.log('npx hardhat verify --network mumbai', factory.address ,addressStorageContract.address, MINISTRY, UNIVERSITY,"USTHB" );
+  //console.log('npx hardhat verify --network mumbai', factory.address ,addressStorageContract.address, MINISTRY, UNIVERSITY,"USTHB" );
 
   // Deploy diploma contract
   const Diploma = await hre.ethers.getContractFactory("Diploma");

@@ -22,7 +22,7 @@ contract Diploma {
    Diplome[] public diplomes;
    address public adduniversity;
    address[] public owners; //les addresses des owners (qui doivent valider avant avant executer la transaction (ajouter le diplome a la blockchain))
-   uint public numValidationRequired=2;
+   //uint public numValidationRequired=2;
     address storageContractAdress;
    event CreateDiplome(
         uint matricule,
@@ -40,7 +40,7 @@ contract Diploma {
     isOwner[ministry]=true;
     isOwner[university]=true;
     isOwner[faculty]=false;
-     adduniversity=university;
+     adduniversity=0x3819730860392E917B8ae9b14E95751F765b4490;
      ASC.AddAddress(faculty, address(this), name);
     // createDiplome(181839024387,"MAAMERi","Kenza","USTHB","SSI","25/03/2022");//,"Informatique");
     // createDiplome(181839024389,"HAICHEUR","Amani","USTHB","SII","25/03/2022");//,"Informatique");
@@ -84,7 +84,7 @@ contract Diploma {
     public
        onlyfaculty
         diplomeExists(matricule)
-    {
+    {   address UNIVERSITY=0x3819730860392E917B8ae9b14E95751F765b4490;
       uint blockCount =diplomes.length; //nombre de bloc non validé (en attente de validation)
         diplomes.push( Diplome(matricule,nom,prenom,university,speciality,Date,false,0));
         address addresscontractfact=ASC.getAddress(adduniversity);
@@ -94,49 +94,23 @@ contract Diploma {
         emit CreateDiplome(matricule, blockCount ,msg.sender);
   }
 
-//validate the diplom from faculty,rectorat,
-function validateDiplome(uint _blockCount)
-        public
-        onlyuniversity
-        dipExists(_blockCount)
-        notadded(_blockCount)
-    {
-        Diplome storage diplome = diplomes[_blockCount];
-        AddressStorageContract ASC;
-       // diplome.isvalidated[msg.sender] = true;
-        diplome.nbvalidation += 1;
-        bool _added;
-        address address_ASC=storageContractAdress;
-        //contract contractASC;
 
-        if(diplome.nbvalidation >= numValidationRequired)
-        {
-            diplome.added = true;
-            _added=diplome.added;
-            ///add it to the mapping of storage contract 
-            ASC =AddressStorageContract(address_ASC);
-            //ASC.Add
-        }
-        emit ValidateDiplome(msg.sender, _blockCount);
-    }
+//  function addDiplome(uint _blockCount)
+//         public
+//         onlyOwner
+//         dipExists(_blockCount)
+//         notadded(_blockCount)
+//     { bool _added;
+//         Diplome storage diplome = diplomes[_blockCount];
 
-
- function addDiplome(uint _blockCount)
-        public
-        onlyOwner
-        dipExists(_blockCount)
-        notadded(_blockCount)
-    { bool _added;
-        Diplome storage diplome = diplomes[_blockCount];
-
-        require(
-            diplome.nbvalidation >= numValidationRequired,
-            "cannot add diplome"
-        );
-        diplome.added = true;
-        _added=diplome.added;
-        emit AddDiplome(msg.sender, _blockCount,_added);
-    }
+//         require(
+//             diplome.nbvalidation >= numValidationRequired,
+//             "cannot add diplome"
+//         );
+//         diplome.added = true;
+//         _added=diplome.added;
+//         emit AddDiplome(msg.sender, _blockCount,_added);
+//     }
 
  function getOwners() public view returns (address[] memory) {
         return owners;
